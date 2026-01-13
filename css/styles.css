@@ -1,7 +1,7 @@
 /* ===============================
    RESET BÁSICO
    =============================== */
-   
+
 *,
 *::before,
 *::after {
@@ -16,7 +16,8 @@ html {
 
 body {
   font-family: Georgia, "Times New Roman", serif;
-  background-color: #f3efe8; /* beige archivo */
+  background-color: #f3efe8;
+  /* beige archivo */
   color: #2b2b2b;
   line-height: 1.6;
   overflow-x: hidden;
@@ -25,7 +26,8 @@ body {
 /* ===============================
    TIPOGRAFÍA
    =============================== */
-h1, h2 {
+h1,
+h2 {
   font-weight: normal;
   letter-spacing: 0.02em;
 }
@@ -41,7 +43,7 @@ h2 {
 }
 
 p {
-  
+
   font-size: 1rem;
 }
 
@@ -73,7 +75,7 @@ p {
 
   cursor: pointer;
 
-  box-shadow: 0 10px 24px rgba(0,0,0,0.22);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
   backdrop-filter: blur(4px);
 
   transition:
@@ -88,16 +90,16 @@ p {
   color: #ffffff;
 
   transform: translateY(-1px);
-  box-shadow: 0 14px 30px rgba(0,0,0,0.32);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.32);
 }
 
 .enter-button:active {
   transform: translateY(0) scale(0.98);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
 }
 
 .enter-button:focus-visible {
-  outline: 3px solid rgba(255,255,255,0.9);
+  outline: 3px solid rgba(255, 255, 255, 0.9);
   outline-offset: 4px;
 }
 
@@ -108,6 +110,12 @@ p {
 .memory-text {
   margin-bottom: 2rem;
   font-size: 1.05rem;
+}
+
+.memory-text.short {
+  max-width: 600px;
+  margin: 0 auto;
+
 }
 
 /* ===============================
@@ -140,7 +148,7 @@ figcaption {
 
 .gallery img {
   width: 100%;
-  
+
 }
 
 .scene {
@@ -152,6 +160,7 @@ figcaption {
   overflow: hidden;
   color: aliceblue;
 }
+
 .scene-content,
 .memory-fragment {
   width: 100%;
@@ -175,7 +184,7 @@ figcaption {
   z-index: 2;
   display: flex;
   justify-content: space-between;
-  
+
   align-items: center;
 }
 
@@ -204,8 +213,9 @@ figcaption {
 .layer-front img {
   width: 35%;
   max-width: 380px;
-  
+
 }
+
 .scene--intro {
   background: url("../assets/img/intro_archivo_memoria.png") center / cover no-repeat;
   z-index: 1;
@@ -218,32 +228,36 @@ figcaption {
 
 .scene--archivo-video {
   background: url("../assets/img/archivo_bg_olivar.png") center / cover no-repeat;
-  
+
 }
-.scene--archivo-video .memory-text{
- /* background-color: rgba(43, 43, 43, 0.8); */
+
+.scene--archivo-video .memory-text {
+  /* background-color: rgba(43, 43, 43, 0.8); */
   padding: 1rem;
 }
 
 
 .scene--barro img,
-.scene--archivo-video img{
-  
-   box-shadow:
-    inset 0 0 30px rgba(0,0,0,0.35),
-    0 12px 30px rgba(40,20,10,0.45);
-  }
-.memory-text{
+.scene--archivo-video img {
+
+  box-shadow:
+    inset 0 0 30px rgba(0, 0, 0, 0.35),
+    0 12px 30px rgba(40, 20, 10, 0.45);
+}
+
+.memory-text {
   padding-bottom: 1em;
   background: rgba(0, 0, 0, .4);
   border-radius: 20px;
-  
+
 }
-.memory-text p{
+
+.memory-text p {
   font-size: 1.1rem;
 }
+
 .memory-fragment .subtext,
-.memory-text .subtext{
+.memory-text .subtext {
 
   font-size: 0.9rem;
   font-style: italic;
@@ -251,21 +265,25 @@ figcaption {
   margin-top: 1.5rem;
   margin-bottom: 2.5rem;
 }
-.scene--ecos img{
+
+.scene--ecos img {
   border-top-left-radius: 50%;
   border-top-right-radius: 50%;
   /* box-shadow:  0 0 15px rgba(0,0,0,0.5); */
-   box-shadow:
-    inset 0 0 30px rgba(0,0,0,0.35),
-    0 12px 30px rgba(40,20,10,0.45);
+  box-shadow:
+    inset 0 0 30px rgba(0, 0, 0, 0.35),
+    0 12px 30px rgba(40, 20, 10, 0.45);
 }
+
 .scene--archivo-video .memory-fragment {
   padding-top: 15vh;
 }
- .layer-mid {
+
+.layer-mid {
   justify-content: flex-start;
   padding-left: 10vw;
 }
+
 .layer-front {
   justify-content: flex-end;
   padding-right: 10vw;
@@ -274,16 +292,19 @@ figcaption {
 .scene--voces .layer-mid img {
   width: 55%;
 }
-.scene--voces .layer-front  {
+
+.scene--voces .layer-front {
   justify-content: end;
   vertical-align: bottom;
 }
+
 .scene--voces .layer-front img {
   width: 20%;
 }
+
 .audio-grid {
   display: grid;
-  grid-template-columns:  1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 1.5rem;
   margin-top: 3rem;
 }
@@ -313,7 +334,7 @@ figcaption {
 .video-grid video {
   width: 100%;
   background: #000;
-  border: 1px solid rgba(255,255,255,0.15);
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 
@@ -355,6 +376,6 @@ figcaption {
 
   .scene {
     padding: 6rem 2rem;
-    
+
   }
 }
